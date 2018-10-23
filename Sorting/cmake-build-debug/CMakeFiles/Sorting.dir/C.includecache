@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/ronny/Documentos/Workspace/Estrutura-de-Dados/Sorting/main.c
+stdio.h
+-
+ordenacao.h
+/home/ronny/Documentos/Workspace/Estrutura-de-Dados/Sorting/ordenacao.h
+
+/home/ronny/Documentos/Workspace/Estrutura-de-Dados/Sorting/ordenacao.h
+

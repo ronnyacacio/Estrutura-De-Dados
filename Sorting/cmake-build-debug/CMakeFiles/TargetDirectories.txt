@@ -1,0 +1,3 @@
+/home/ronny/Documentos/Workspace/Estrutura-de-Dados/Sorting/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/ronny/Documentos/Workspace/Estrutura-de-Dados/Sorting/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/ronny/Documentos/Workspace/Estrutura-de-Dados/Sorting/cmake-build-debug/CMakeFiles/Sorting.dir

@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/ronny/Documentos/Workspace/Estrutura-de-Dados/Estruturas/Listas/Lista_Sequencial/lista_seq.c
+stdio.h
+-
+stdlib.h
+-
+limits.h
+-
+lista_sequencial.h
+/home/ronny/Documentos/Workspace/Estrutura-de-Dados/Estruturas/Listas/Lista_Sequencial/lista_sequencial.h
+
+/home/ronny/Documentos/Workspace/Estrutura-de-Dados/Estruturas/Listas/Lista_Sequencial/lista_sequencial.h
+
+/home/ronny/Documentos/Workspace/Estrutura-de-Dados/Estruturas/Listas/Lista_Sequencial/main.c
+stdio.h
+-
+lista_sequencial.h
+/home/ronny/Documentos/Workspace/Estrutura-de-Dados/Estruturas/Listas/Lista_Sequencial/lista_sequencial.h
+

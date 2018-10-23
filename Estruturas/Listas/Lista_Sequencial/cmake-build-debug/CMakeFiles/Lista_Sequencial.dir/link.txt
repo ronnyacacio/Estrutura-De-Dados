@@ -1,0 +1,1 @@
+/usr/bin/cc -g   CMakeFiles/Lista_Sequencial.dir/main.c.o CMakeFiles/Lista_Sequencial.dir/lista_seq.c.o  -o Lista_Sequencial 
