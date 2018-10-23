@@ -92,11 +92,16 @@ void countingSort(int* vet, int length){
     }
 }
 
+void interlacing(){
+}
+void mergeSort(){
+}
+
 int partitioning(int* vet, int p, int q){
     int i = p-1;
     int temp;
     int j;
-    for (int j = p; j < q ; j++) {
+    for (j = p; j < q ; j++) {
         if(vet[j] <= vet[q]){
             i++;
             temp = vet[i];

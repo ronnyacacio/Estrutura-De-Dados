@@ -18,4 +18,5 @@ int main() {
 
     vector_delete(v);
 
+    return 0;
 }

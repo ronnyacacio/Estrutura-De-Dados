@@ -17,4 +17,6 @@ void countingSort(int* vet, int length);
 
 void quickSort(int* vet, int p, int q);
 
+void mergeSort();
+
 #endif //SORTING_ORDENACAO_H
