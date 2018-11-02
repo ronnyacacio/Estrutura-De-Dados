@@ -1,4 +1,0 @@
-"/opt/CLion-2018.2.5 (1)/clion-2018.2.5/bin/cmake/linux/bin/cmake" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/ronny/Documentos/Workspace/Estrutura-de-Dados/Estruturas/Listas/Lista_Sequencial
--- Configuring done
--- Generating done
--- Build files have been written to: /home/ronny/Documentos/Workspace/Estrutura-de-Dados/Estruturas/Listas/Lista_Sequencial/cmake-build-debug

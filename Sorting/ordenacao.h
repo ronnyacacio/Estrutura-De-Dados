@@ -1,5 +1,5 @@
-#ifndef SORTING_ORDENACAO_H
-#define SORTING_ORDENACAO_H
+#ifndef ORDENACAO_H
+#define ORDENACAO_H
 
 void print_vector(int* vet, int length);
 
@@ -19,4 +19,4 @@ void quickSort(int* vet, int p, int q);
 
 void mergeSort();
 
-#endif //SORTING_ORDENACAO_H
+#endif

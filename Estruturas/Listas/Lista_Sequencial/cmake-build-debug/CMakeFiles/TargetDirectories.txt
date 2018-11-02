@@ -1,3 +1,0 @@
-/home/ronny/Documentos/Workspace/Estrutura-de-Dados/Estruturas/Listas/Lista_Sequencial/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/ronny/Documentos/Workspace/Estrutura-de-Dados/Estruturas/Listas/Lista_Sequencial/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/ronny/Documentos/Workspace/Estrutura-de-Dados/Estruturas/Listas/Lista_Sequencial/cmake-build-debug/CMakeFiles/Lista_Sequencial.dir

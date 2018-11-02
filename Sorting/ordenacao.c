@@ -10,7 +10,7 @@ void print_vector(int* vet, int length){
 
 int* vector_new(int length){
 
-    int* vet= malloc(length*sizeof(int));
+    int* vet = malloc(length*sizeof(int));
     printf("Fill in the vector!\n");
     for (int i = 0; i < length; i++) {
         scanf("%d", &vet[i]);
