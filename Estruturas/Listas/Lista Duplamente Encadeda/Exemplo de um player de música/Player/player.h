@@ -25,7 +25,7 @@ void mostrar(LList list);
 
 bool adicionar(LList list, char music[], int pos);
 
-bool remover(LList list, int pos);
+void remover(LList list, int pos);
 
 int estado_atual(LList list);
 

@@ -138,25 +138,36 @@ bool adicionar(LList list, char music[], int pos){
     return false;
 }
 
-bool remover(LList list, int pos){
+void remover(LList list, int pos){
     if(pos >= 0){
         LLNode antnode = list->first;
-        int antindex = 0;
-        while(antindex < pos && antnode->next != NULL){
-            ++antindex;
-            antnode = antnode->next;
-       }
-       if(antnode != NULL){
-            antnode->back->next = antnode->next;
-            antnode->next->back = antnode->back;
-            if(pos == 0 && antnode->next != NULL){
-                list->first = antnode->next;
+        if(antnode != NULL){    
+            int antindex = 0;
+            while(antindex < pos && antnode->next != NULL){
+                ++antindex;
+                antnode = antnode->next;
+           }
+           if(antnode != NULL){
+                antnode->back->next = antnode->next;
+                antnode->next->back = antnode->back;
+                if(pos == 0 && antnode->next != NULL){
+                    if(antnode->next != antnode){
+                    list->first = antnode->next;
+                    list->atual = antnode->next;
+                    } else {
+                        list->first = NULL;
+                        list->atual = NULL;
+                    }   
+                }
+                music_delete(antnode);
+                printf("Música removida com sucesso!\n");
             }
-            music_delete(antnode);
-            return true;
-        }
+        } else {    
+            printf("Falha na remoção!\n");
+        }   
+    } else {
+       printf("Falha na remoção!\n");
     }
-    return false;
 }
 
 int estado_atual(LList list){

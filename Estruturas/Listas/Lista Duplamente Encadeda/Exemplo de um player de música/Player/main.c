@@ -35,13 +35,9 @@ int main(){
 			}
 		} else if(opcao == 8){
 			int pos;
+			printf("Digite o índice da música: ");
 			scanf("%d", &pos);
-			bool temp = remover(player, pos);
-			if(temp){
-				printf("Música removida com sucesso!\n");
-			} else {
-				printf("Falha na remoção!\n");
-			}
+			remover(player, pos);
 		} else if(opcao == 9){
 			int estado = estado_atual(player);
 			if(estado == 0){
