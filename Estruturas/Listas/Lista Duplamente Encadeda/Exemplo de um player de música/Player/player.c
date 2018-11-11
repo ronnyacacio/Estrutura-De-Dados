@@ -42,10 +42,10 @@ void music_delete(LLNode node) {
     free(node);
 }
 
-void music_delete_recursive(LLNode node) {
-    if(node != NULL) {
-        music_delete_recursive(node->next);
-        free(node);
+void music_delete_recursive(LList list, LLNode node) {
+    if(node->next != list->first) {
+        music_delete_recursive(list, node->next);
+        free(node->next);
     }
 }
 
@@ -113,7 +113,7 @@ bool adicionar(LList list, char music[], int pos){
                 ++antindex;
                 antnode = antnode->next;
             }
-            if(antindex == 0){
+            if(antindex == 0 && pos == 0){
                 node->next = antnode;
                 node->back = antnode->back;
                 antnode->back->next = node;
@@ -169,7 +169,7 @@ int estado_atual(LList list){
 }
 
 void encerrar(LList list){
-    music_delete_recursive(list->first);
+    music_delete_recursive(list, list->first);
     free(list);
 }
 
