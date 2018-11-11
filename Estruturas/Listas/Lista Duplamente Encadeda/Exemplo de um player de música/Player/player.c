@@ -109,7 +109,7 @@ bool adicionar(LList list, char music[], int pos){
             return true;
         } else {
             int antindex = 0;
-            while(antindex < pos && antnode->next != NULL){
+            while(antindex < pos && antnode->next != list->first){
                 ++antindex;
                 antnode = antnode->next;
             }
@@ -118,19 +118,17 @@ bool adicionar(LList list, char music[], int pos){
                 node->back = antnode->back;
                 antnode->back->next = node;
                 antnode->back = node;
-                if(pos == 0){
-                    list->first = node;
-                }
-            } else if(antindex < pos){
-                antnode->next->back = node;
-                node->next = antnode->next;
-                antnode->next = node;
-                node->back = antnode;
+                list->first = node;
             } else if(antindex == pos) {
                 node->next = antnode;
                 node->back = antnode->back;
                 antnode->back->next = node;
                 antnode->back = node;
+            } else if(antindex < pos){
+                node->next = list->first;
+                node->back = antnode;
+                antnode->next = node;
+                list->first->back = node;
             }
         }
         return true;
@@ -143,30 +141,26 @@ void remover(LList list, int pos){
         LLNode antnode = list->first;
         if(antnode != NULL){    
             int antindex = 0;
-            while(antindex < pos && antnode->next != NULL){
+            while(antindex < pos && antnode->next != list->first){
                 ++antindex;
                 antnode = antnode->next;
            }
-           if(antnode != NULL){
-                antnode->back->next = antnode->next;
-                antnode->next->back = antnode->back;
-                if(pos == 0 && antnode->next != NULL){
-                    if(antnode->next != antnode){
-                    list->first = antnode->next;
-                    list->atual = antnode->next;
-                    } else {
-                        list->first = NULL;
-                        list->atual = NULL;
-                    }   
-                }
-                music_delete(antnode);
-                printf("Música removida com sucesso!\n");
+            antnode->back->next = antnode->next;
+            antnode->next->back = antnode->back;
+            if(pos == 0){
+                if(antnode->next != antnode){
+                list->first = antnode->next;
+                list->atual = antnode->next;
+                } else {
+                    list->first = NULL;
+                    list->atual = NULL;
+                }   
             }
-        } else {    
-            printf("Falha na remoção!\n");
-        }   
+            music_delete(antnode);
+            printf("Música removida com sucesso!\n");
+        }
     } else {
-       printf("Falha na remoção!\n");
+       printf("Não existem músicas no player!\n");
     }
 }
 
