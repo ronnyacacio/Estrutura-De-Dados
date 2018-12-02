@@ -168,6 +168,10 @@ int estado_atual(LList list){
     return list->status;
 }
 
+LLNode musica_atual(LList list){
+    return list->atual;
+}
+
 void encerrar(LList list){
     music_delete_recursive(list, list->first);
     free(list);

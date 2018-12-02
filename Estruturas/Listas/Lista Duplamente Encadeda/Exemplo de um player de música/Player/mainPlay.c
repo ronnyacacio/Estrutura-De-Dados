@@ -47,6 +47,7 @@ int main(){
 			} else {
 				printf("Parado!\n");
 			}
+			printf("Música atual: %s\n", musica_atual(player));
 		} else if(opcao == 10){
 			encerrar(player);
 		} else {

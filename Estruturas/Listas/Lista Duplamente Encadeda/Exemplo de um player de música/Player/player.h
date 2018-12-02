@@ -29,6 +29,8 @@ void remover(LList list, int pos);
 
 int estado_atual(LList list);
 
+LLNode musica_atual(LList list);
+
 void encerrar(LList list);
 
 int chamarMenu();
