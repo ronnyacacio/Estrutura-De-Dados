@@ -257,20 +257,6 @@ unsigned int qx_list_remove_element_all(QxList list, int element){
 	Node* tempnode = NULL;
 	int contnode = 0;
 	if(antnode != NULL){
-		if(antnode->next == NULL){
-			if(antnode->value == element){
-				free(antnode);
-				list->first = NULL;
-				return 1;
-			}
-			return QX_LAMBDA_ELEMENT;
-		}
-		if(antnode->value == element){
-			list->first = list->first->next;
-			free(antnode);
-			contnode++;
-		}
-		antnode = list->first;
 		while(antnode->next != NULL){
 			if(antnode->next->value == element){
 				tempnode = antnode->next;
@@ -280,8 +266,11 @@ unsigned int qx_list_remove_element_all(QxList list, int element){
 			} else
 				antnode = antnode->next;
 		}
+		antnode = list->first;
 		if(antnode->value == element){
+			list->first = list->first->next;
 			free(antnode);
+			contnode++;
 		}
 		return contnode;
 	}

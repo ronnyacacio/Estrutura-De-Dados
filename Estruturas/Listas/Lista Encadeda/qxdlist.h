@@ -1,5 +1,35 @@
-#ifndef QXDLIST_H
-#define QXDLIST_H
+/************************************************************************
+ **
+ **  @file   qxdlist.h
+ **  @date   2018-11-7
+ **  @author Arthur Rodrigues Araruna <ararunaufc(at)gmail.com>
+ **
+ **  @brief
+ **
+ **  @copyright
+ **  This source code is part of an educational project, associated with
+ **  an undergraduate course or extension project, that is hosted at
+ **  Universidade Federal do Ceará, Campus Quixadá.
+ **  Copyright (C) 2018 UFC Quixadá, All Rights Reserved.
+ **
+ **  This project is free software: you can redistribute it and/or modify
+ **  it under the terms of the GNU General Public License as published by
+ **  the Free Software Foundation, either version 3 of the License, or
+ **  (at your option) any later version.
+ **
+ **  This project is distributed in the hope that it will be useful,
+ **  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ **  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ **  GNU General Public License for more details.
+ **
+ **  You should have received a copy of the GNU General Public License
+ **  along with the source code of this project. If not, see
+ **  <http://www.gnu.org/licenses/>.
+ **
+ *************************************************************************/
+
+#ifndef ED_QXALG_QXDLIST_H
+#define ED_QXALG_QXDLIST_H
 
 #include "qxddefs.h"
 #include <stdio.h>
@@ -242,4 +272,4 @@ void qx_list_clear(QxList list);
 void qx_list_print_to(QxList list, FILE *fp);
 ///@}
 
-#endif //QXDLIST_H
+#endif //ED_QXALG_QXDLIST_H
